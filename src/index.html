@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+  <title>CSS Template</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    body {
+
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+
+
+    /* Style header */
+
+    header {
+
+      background-color: #666;
+
+      padding: 30px;
+
+      text-align: center;
+
+      font-size: 35px;
+
+      color: white;
+
+    }
+
+
+
+    /* Tạo 2 cột cạnh nhau */
+
+    nav {
+
+      float: left;
+
+      width: 30%;
+
+      height: 300px;
+
+      /* Đoạn này dùng để ví dụ cho dễ nhìn */
+
+      background: #ccc;
+
+      padding: 20px;
+
+    }
+
+
+
+    /* Style danh sách ở trong menu */
+
+    nav ul {
+
+      list-style-type: none;
+
+      padding: 0;
+
+    }
+
+
+
+    article {
+
+      float: left;
+
+      padding: 20px;
+
+      width: 70%;
+
+      background-color: #f1f1f1;
+
+      height: 300px;
+
+      /* Đoạn này dùng để ví dụ cho dễ nhìn */
+
+    }
+
+
+
+    /* Bỏ floats sau khi tạo cột */
+
+    section:after {
+
+      content: "";
+
+      display: table;
+
+      clear: both;
+
+    }
+
+
+
+    /* Style footer */
+
+    footer {
+
+      background-color: #777;
+
+      padding: 10px;
+
+      text-align: center;
+
+      color: white;
+
+    }
+
+
+
+    /* Responsive - 2 cột sẽ chiếm 100% độ rộng ở màn hình có độ rộng tối đa 600px (cột này sẽ xếp chồng lên cột kia) */
+
+    @media (max-width: 600px) {
+
+
+
+      nav,
+
+      article {
+
+        width: 100%;
+
+        height: auto;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+  <h2>Bố cục CSS Float</h2>
+
+  <p>Trong ví dụ này, chúng ta tạo ra một header, 2 cột và một footer. Trên màn hình nhỏ hơn, cột sẽ xếp chồng lên nhau
+
+  </p>
+
+  <p>Resize(Kéo cửa sổ trình duyệt theo chiều ngang) để thấy hiệu ứng Responsive</p>
+
+  <header>
+
+    <h2>Cities</h2>
+
+  </header>
+
+  <section>
+
+    <nav>
+
+      <ul>
+
+        <li><a href="#">London</a></li>
+
+        <li><a href="#">Paris</a></li>
+
+        <li><a href="#">Tokyo</a></li>
+
+      </ul>
+
+    </nav>
+
+    <article>
+
+      <h1>London</h1>
+
+      <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan
+
+        area of over 13 million inhabitants.</p>
+
+      <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to
+
+        its founding by the Romans, who named it Londinium.</p>
+
+    </article>
+
+  </section>
+
+  <footer>
+
+    <p>Footer</p>
+
+  </footer>
+
+</body>
+
+
+
+</html>
